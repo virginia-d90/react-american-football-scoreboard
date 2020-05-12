@@ -11,20 +11,36 @@ function App() {
   const [awayScore, setAwayScore]= useState(0)
 
   //state changers
+  
   const homeTD = event => {
+    event.preventDefault()
     setHomeScore(homeScore + 7)
   }
   const homeFG = event => {
+    event.preventDefault()
     setHomeScore(homeScore + 3)
   }
   const awayTD = event => {
+    event.preventDefault()
     setAwayScore(awayScore + 7)
   }
   const awayFG = event => {
+    event.preventDefault()
     setAwayScore(awayScore + 3)
   }
+  //Begin Stretch work
+  // function TeamInfo(props){
+  //   const {name, amount} = props
 
-
+  //   if (amount === homeScore){
+  //     return <h2 className="home__name">{name}</h2>
+  //   }
+  //   if (amount === awayScore){
+  //     return <h2 className="away__name">{name}</h2>
+  //   }
+  // }
+  // <TeamInfo name='Celtics' amount={homeScore}/>
+//End Stretch work
   return (
     <div className="container">
       <section className="scoreboard">
@@ -57,6 +73,10 @@ function App() {
       </section>
     </div>
   );
+  
+  
+  
 }
+
 
 export default App;
